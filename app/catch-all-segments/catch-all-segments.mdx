@@ -1,0 +1,19 @@
+- The catch-all route matches multiple segments or a single segment. It’s useful when you want to match an arbitrary depth of nested paths.
+
+- **Example**: `/docs/[...slug]` matches `/docs/intro`, `/docs/guides/installation`, or even `/docs/guides/installation/linux`.
+
+## Folder Structure:
+
+```javascript
+app
+└── docs
+    └── [...slug]
+        └── page.tsx
+```
+
+- The `slug` variable can be used to fetch the data from the server to render content for the page.
+
+```tsx
+const res = await fetch(`https://example.com/api/docs/${slug.join("/")}`);
+const data = await res.json();
+```
