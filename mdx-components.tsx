@@ -14,7 +14,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       <pre className="bg-gray-800 p-4 rounded shadow" {...props} />
     ),
     code: (props) => (
-      <code className="text-sm font-mono bg-gray-800 p-1 rounded" {...props} />
+      <code className="text-sm font-mono bg-gray-800 p-2 rounded" {...props} />
     ),
   };
 }
